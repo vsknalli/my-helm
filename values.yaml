@@ -1,0 +1,17 @@
+# Default values for hello-world-rest-api.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+deployment:
+  replicaCount: 3
+  name: my-deployment
+  image:
+    app: nginx
+    version: 0.0.1.RELEASE 
+
+service:
+  name: my-service
+  type: NodePort
+  port: 5000
+  targetPort: 5000
+  nodePort: 32036
